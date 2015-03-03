@@ -12,4 +12,18 @@ var Fizzbuzz = function() {
     return number % 15 === 0;
   };
 
+  Fizzbuzz.prototype.gameReturn = function(number){
+    if(this.isDivisibleByFifteen(number)){
+      return "FizzBuzz";
+    }
+    else if(this.isDivisibleByFive(number)){
+      return "Buzz";
+    }
+    else if(this.isDivisibleByThree(number)){
+      return "Fizz";
+    }
+    else
+      return number;
+  };
+
 };

@@ -35,4 +35,34 @@ describe('Fizzbuzz', function(){
 
   });
 
+  describe('returns a keyword if number is divisible', function(){
+
+    it('by three', function(){
+      expect(fizzbuzz.gameReturn(3)).toEqual('Fizz')
+    });
+
+    it('by five', function(){
+      expect(fizzbuzz.gameReturn(5)).toEqual('Buzz')
+    });
+
+    it('by fifteen', function(){
+      expect(fizzbuzz.gameReturn(15)).toEqual('FizzBuzz')
+    });
+  });
+
+  describe('returns number when number is not divisible', function(){
+
+    it('by three', function(){
+      expect(fizzbuzz.gameReturn(1)).toEqual(1)
+    });
+
+    it('by five', function(){
+      expect(fizzbuzz.gameReturn(7)).toEqual(7)
+    });
+
+    it('by fifteen', function(){
+      expect(fizzbuzz.gameReturn(14)).toEqual(14)
+    });
+  });
+
 });
